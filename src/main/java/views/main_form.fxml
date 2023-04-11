@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.main_formController">
+    <children>
+      <AnchorPane layoutX="7.0" layoutY="68.0" prefHeight="322.0" prefWidth="452.0" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="473.0" AnchorPane.topAnchor="68.0">
+         <children>
+            <TableView fx:id="PartTable" editable="true" layoutX="7.0" layoutY="61.0" prefHeight="246.0" prefWidth="446.0">
+              <columns>
+                <TableColumn fx:id="PartIDCol" prefWidth="81.59997272491455" text="Part ID" />
+                <TableColumn fx:id="PartNameCol" prefWidth="115.99996948242188" text="Part Name" />
+                  <TableColumn fx:id="PartInvLvlCol" prefWidth="93.59999084472656" text="Inventory Level" />
+                  <TableColumn fx:id="PartCostCol" minWidth="3.199951171875" prefWidth="154.39999999999998" text="Price/Cost per Unit" />
+              </columns>
+            </TableView>
+            <TextField fx:id="PartSearchText" layoutX="280.0" layoutY="35.0"  promptText="Search by PartID or Name" />
+            <Label layoutX="14.0" layoutY="38.0" prefHeight="18.0" prefWidth="62.0" text="Parts">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="AddPartB" layoutX="230.0" layoutY="317.0" mnemonicParsing="false" onAction="#AddPartsOnClick" prefHeight="26.0" prefWidth="50.0" text="Add" />
+            <Button fx:id="ModifyPartB" layoutX="301.0" layoutY="317.0" mnemonicParsing="false" onAction="#ModifyPartsOnClick" text="Modify" />
+            <Button fx:id="DeletePartB" layoutX="379.0" layoutY="317.0" mnemonicParsing="false" onAction="#DeletePartsOnClick" text="Delete" />
+         </children>
+      </AnchorPane>
+        <Label layoutX="27.0" layoutY="21.0" prefHeight="18.0" prefWidth="330.0" text="Inventory Management System">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Button fx:id="ExitButton" layoutX="863.0" layoutY="431.0" mnemonicParsing="false" onAction="#onExitButton" prefHeight="26.0" prefWidth="54.0" text="Exit" />
+      <AnchorPane layoutX="487.0" layoutY="68.0" prefHeight="344.0" prefWidth="455.0">
+         <children>
+            <TableView fx:id="ProductTable" editable="true" layoutX="7.0" layoutY="61.0" prefHeight="246.0" prefWidth="434.0">
+              <columns>
+                <TableColumn fx:id="ProdIDColumn" prefWidth="75.0" text="ProductID" />
+                <TableColumn fx:id="ProdNameColumn" prefWidth="112.800048828125" text="Product Name" />
+                  <TableColumn fx:id="ProdInvColumn" prefWidth="95.199951171875" text="Inventory Level" />
+                  <TableColumn fx:id="ProdCostColumn" prefWidth="149.60001220703123" text="Price/Cost Per Unit" />
+              </columns>
+            </TableView>
+            <TextField fx:id="ProdSearchText" layoutX="268.0" layoutY="36.0" promptText="Search by Product ID or Name" />
+            <Button fx:id="AddProductB" layoutX="228.0" layoutY="317.0" mnemonicParsing="false" onAction="#AddProdOnClick" prefHeight="26.0" prefWidth="50.0" text="Add" />
+            <Button fx:id="ModifyProdB" layoutX="302.0" layoutY="318.0" mnemonicParsing="false" onAction="#ModifyProdOnClick" text="Modify" />
+            <Button fx:id="DeleteProdB" layoutX="377.0" layoutY="318.0" mnemonicParsing="false" onAction="#DeleteProdOnClick" text="Delete" />
+            <Label layoutX="14.0" layoutY="40.0" text="Products">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>
